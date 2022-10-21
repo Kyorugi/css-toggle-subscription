@@ -18,16 +18,104 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  width: auto;
   font-family: "Montserrat";
   background-color: var(--Very-Light-Grayish-Blue);
 }
 
 h1 {
-  color: var(--Grayish-Blue);
+  color: var(--DarkGrayish-Blue);
+  font-size: 70px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 
-.toglle-container {
-  width: 230px;
+h2 {
+  color: var(--Grayish-Blue);
+  font-size: 29px;
+}
+
+h3 {
+  color: var(--Grayish-Blue);
+  padding: 30px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+
+p {
+  color: var(--Grayish-Blue);
+}
+span {
+  color: var(--Light-Grayish-Blue);
+  font-size: 15px;
+}
+.dolar {
+  font-size: 40px;
+  color: var(--DarkGrayish-Blue);
+  margin-right: 8px;
+
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  width: 265px;
+  border-color: rgba(249, 247, 247, 0.532);
+}
+
+.Header-Toggle {
+  width: 200px;
+  text-align: center;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin: auto;
+}
+.toglle-cards {
+  width: 375px;
+  margin: auto;
+  text-align: center;
+}
+
+.Basic {
+  background-color: white;
+  width: 325px;
+  height: 445px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.Professional {
+  background: var(--background);
+  width: 325px;
+  height: 445px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.Professional h3 {
+  color: var(--Very-Light-Grayish-Blue);
+}
+.Professional h1 {
+  color: var(--Very-Light-Grayish-Blue);
+}
+.Professional span {
+  color: var(--Very-Light-Grayish-Blue);
+}
+.Professional p {
+  color: var(--Very-Light-Grayish-Blue);
+}
+.Professional button {
+  color: hsl(237, 63%, 64%);
+  background: var(--Very-Light-Grayish-Blue);
+}
+
+.Master {
+  background-color: white;
+  width: 325px;
+  height: 445px;
+  border-radius: 10px;
   margin: auto;
 }
 
@@ -42,4 +130,44 @@ button {
   font-family: "Montserrat";
   text-transform: uppercase;
   color: var(--Very-Light-Grayish-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.attribution {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 376px) and (max-width: 1440px) {
+  .toglle-cards {
+    display: flex;
+    width: 975px;
+    justify-content: center;
+    background-image: url(/images/bg-bottom.svg);
+  }
+
+  .Basic {
+    width: 325px;
+  }
+
+  .Basic h3 {
+    margin-top: 2px;
+  }
+
+  .Professional {
+    width: 325px;
+    height: 480px;
+    border-radius: 10px;
+  }
+
+  .Master {
+    width: 325px;
+  }
+
+  .Master h3 {
+    margin-top: 2px;
+  }
 }
