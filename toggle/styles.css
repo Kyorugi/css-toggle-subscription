@@ -34,7 +34,10 @@ h1 {
 
 h2 {
   color: var(--Grayish-Blue);
-  font-size: 29px;
+  font-size: 31px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0;
 }
 
 h3 {
@@ -55,7 +58,6 @@ span {
   font-size: 40px;
   color: var(--DarkGrayish-Blue);
   margin-right: 8px;
-
   display: flex;
   align-items: center;
 }
@@ -66,12 +68,61 @@ hr {
 }
 
 .Header-Toggle {
-  width: 200px;
   text-align: center;
-  margin-left: 1px;
-  margin-right: 1px;
-  margin: auto;
+  padding-bottom: 60px;
 }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--background);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  left: 2.8px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50px;
+}
+
+input:checked + .slider {
+  background: hsl(236, 72%, 85%);
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+.switch-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .toglle-cards {
   width: 375px;
   margin: auto;
@@ -84,6 +135,7 @@ hr {
   height: 445px;
   border-radius: 10px;
   margin: auto;
+  box-shadow: 8px 8px 30px #272b2730;
 }
 
 .Professional {
@@ -92,6 +144,7 @@ hr {
   height: 445px;
   border-radius: 10px;
   margin: auto;
+  box-shadow: 8px 8px 30px #272b2730;
 }
 
 .Professional h3 {
@@ -117,11 +170,13 @@ hr {
   height: 445px;
   border-radius: 10px;
   margin: auto;
+  box-shadow: 8px 8px 30px #272b2730;
 }
 
 button {
   background: var(--background);
-  border: none;
+  border: 0, 5px;
+  border-style: hidden;
   border-radius: 5px;
   height: 43px;
   width: 265px;
@@ -135,6 +190,23 @@ button {
   align-items: center;
   margin: auto;
   margin-top: 30px;
+}
+
+button:hover {
+  color: hsl(237, 63%, 64%);
+  background: white;
+  border-color: hsl(237, 63%, 64%);
+  border-style: solid;
+  border-width: thin;
+  cursor: pointer;
+}
+
+.Professional button:hover {
+  color: white;
+  background: var(--background);
+  border-color: white;
+  border-style: solid;
+  border-width: thin;
 }
 
 .attribution {
