@@ -14,11 +14,14 @@
   font-family: "Montserrat";
 }
 
+/*//////////////////////////////////////////////*/
+/*-------STYLE--&--PROPERTIS--OF--SELECTORS----*/
+/*////////////////////////////////////////////*/
+
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: auto;
   font-family: "Montserrat";
   background-color: var(--Very-Light-Grayish-Blue);
 }
@@ -35,8 +38,7 @@ h1 {
 h2 {
   color: var(--Grayish-Blue);
   font-size: 31px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
   margin: 0;
 }
 
@@ -66,10 +68,15 @@ hr {
   width: 265px;
   border-color: rgba(249, 247, 247, 0.532);
 }
-
+/*////////////////////////////////////////////*/
+/*--------------HEADER---SECTION-------------*/
+/*//////////////////////////////////////////*/
 .Header-Toggle {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .switch {
@@ -123,10 +130,22 @@ input:checked + .slider:before {
   align-items: center;
 }
 
-.toglle-cards {
-  width: 375px;
-  margin: auto;
+/*/////////////////////////////////////////*/
+/*------------CARDS----SECTION------------*/
+/*//////////////////////////////////////*/
+.toglle-container {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  min-width: 411px;
+  height: auto;
+  background: url(/images/bg-top.svg), url(/images/bg-bottom.svg);
+  background-size: auto;
+  background-position: right -450% top -3%, left bottom -25%;
+  background-repeat: no-repeat, no-repeat;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .Basic {
@@ -134,8 +153,8 @@ input:checked + .slider:before {
   width: 325px;
   height: 445px;
   border-radius: 10px;
-  margin: auto;
   box-shadow: 8px 8px 30px #272b2730;
+  margin-top: 15px;
 }
 
 .Professional {
@@ -143,22 +162,17 @@ input:checked + .slider:before {
   width: 325px;
   height: 445px;
   border-radius: 10px;
-  margin: auto;
   box-shadow: 8px 8px 30px #272b2730;
+  margin-bottom: 10px;
 }
 
-.Professional h3 {
-  color: var(--Very-Light-Grayish-Blue);
-}
-.Professional h1 {
-  color: var(--Very-Light-Grayish-Blue);
-}
-.Professional span {
-  color: var(--Very-Light-Grayish-Blue);
-}
+.Professional h3,
+.Professional h1,
+.Professional span,
 .Professional p {
   color: var(--Very-Light-Grayish-Blue);
 }
+
 .Professional button {
   color: hsl(237, 63%, 64%);
   background: var(--Very-Light-Grayish-Blue);
@@ -166,16 +180,18 @@ input:checked + .slider:before {
 
 .Master {
   background-color: white;
+
   width: 325px;
   height: 445px;
   border-radius: 10px;
-  margin: auto;
   box-shadow: 8px 8px 30px #272b2730;
+  margin-top: 15px;
 }
-
+/*///////////////////////////////////////////*/
+/*------------BUTTOM--SECTION---------------*/
+/*//////////////////////////////////////////*/
 button {
   background: var(--background);
-  border: 0, 5px;
   border-style: hidden;
   border-radius: 5px;
   height: 43px;
@@ -208,17 +224,34 @@ button:hover {
   border-style: solid;
   border-width: thin;
 }
+/*//////////////////////////////////////*/
+/*--------------FOOTER-----------------*/
+/*////////////////////////////////////*/
 
-.attribution {
+footer {
   margin-top: 20px;
 }
 
 @media only screen and (min-width: 376px) and (max-width: 1440px) {
-  .toglle-cards {
+  .Header-Toggle {
     display: flex;
-    width: 975px;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .toglle-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    height: 750px;
     justify-content: center;
-    background-image: url(/images/bg-bottom.svg);
+    background-position: right 2% top -30%, left bottom -15%;
+    background-repeat: no-repeat, no-repeat;
   }
 
   .Basic {
