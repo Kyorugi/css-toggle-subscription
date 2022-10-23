@@ -180,7 +180,6 @@ input:checked + .slider:before {
 
 .Master {
   background-color: white;
-
   width: 325px;
   height: 445px;
   border-radius: 10px;
